@@ -78,12 +78,12 @@
 
 # 参考リンク
 - [Script User Functions](https://minerva.mamansoft.net/Notes/Script+User+Functions)
-    - TemplatorのScript User Functionsの説明です。
+    - TemplaterのScript User Functionsの説明です。
         - 当リポジトリも、Script User Functionsの方式をとっています。
 - [Obdisian Editor API](https://docs.obsidian.md/Reference/TypeScript+API/Editor)
     - editorのAPIリファレンスです。
-- [Templator File Module API](https://silentvoid13.github.io/Templater/internal-functions/internal-modules/file-module.html)
-    - Templator tp.file のAPIリファレンスです。
+- [Templater File Module API](https://silentvoid13.github.io/Templater/internal-functions/internal-modules/file-module.html)
+    - Templater tp.file のAPIリファレンスです。
 - [📕Templaterでよく使うコマンド・スニペット](https://minerva.mamansoft.net/Notes/%F0%9F%93%95Templater%E3%81%A7%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88)
     - scriptを書くとき参考になります。
 - [Obsidian Tempura](https://tadashi-aikawa.github.io/obsidian-tempura/)
