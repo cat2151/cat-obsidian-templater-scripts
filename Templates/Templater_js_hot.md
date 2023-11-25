@@ -1,0 +1,1 @@
+<%* tp.user.Templater_js_hot(tp) -%>
