@@ -177,6 +177,36 @@ async function Templater_js_hot(tp) {
 //    return line.match(regex)
 //  }
 
+  // ◆現在位置からノート末尾までをConsoleに出力する（Consoleを表示するにはObsidianで CTRL + SHIFT + I ）
+//  const editor = app.workspace.activeLeaf.view.editor
+//  const initialLineNumber = editor.getCursor().line
+//  let currentLineNumber = initialLineNumber
+//  while (true) {
+//    console.log(currentLineNumber)
+//    let line = editor.getLine(currentLineNumber)
+//    if (currentLineNumber == initialLineNumber) {
+//      line = line.slice(editor.getCursor().ch)
+//    }
+//    console.log(line)
+//    currentLineNumber++
+//    if (currentLineNumber > editor.lastLine()) break
+//  }
+
+  // ◆現在位置からノート先頭までをConsoleに出力する（Consoleを表示するにはObsidianで CTRL + SHIFT + I ）
+//  const editor = app.workspace.activeLeaf.view.editor
+//  const initialLineNumber = editor.getCursor().line
+//  let currentLineNumber = initialLineNumber
+//  while (true) {
+//    console.log(currentLineNumber)
+//    let line = editor.getLine(currentLineNumber)
+//    if (currentLineNumber == initialLineNumber) {
+//      line = line.slice(0, editor.getCursor().ch)
+//    }
+//    console.log(line)
+//    currentLineNumber--
+//    if (currentLineNumber < 0) break
+//  }
+
 }
 
 module.exports = Templater_js_hot

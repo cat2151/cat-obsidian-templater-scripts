@@ -21,8 +21,12 @@
         - 現在行をハイライトします。トグル動作します。
         - 範囲選択した場合は、Obsidian標準機能の「ハイライトをトグル」と同じ動作です。
     - 他のエディタの機能で例えると：
-        - サクラエディタのブックマーク（`CTRL + F2`）
+        - サクラエディタの「ブックマーク設定・解除」（`CTRL + F2`）
         - 秀丸エディタの「現在行をマーク」
+- `sakuraeditor-bookmark-next`
+    - サクラエディタの「次のブックマークへ」（`F2`）
+- `sakuraeditor-bookmark-prev`
+    - サクラエディタの「前のブックマークへ」（`SHIFT + F2`）
 - `templater-js-hot`
     - スニペット的なものです。
         - `Hello, World!` のように、小さく、単体で動作するコード群です。
@@ -52,6 +56,17 @@
     - 動作確認
         - `CTRL + F2`キーを押し、現在行がハイライトされることを確認します。
         - 再度押して、現在行のハイライトが消える（トグル動作する）ことを確認します。
+- `sakuraeditor-bookmark-next`
+    - 筆者はひとまず、使わずに様子見しています。
+        - Obsidianの標準機能の `F2`（ノートのリネーム）と衝突するためです。
+            - 筆者はひとまず、ノートのリネームを優先しています。
+- `sakuraeditor-bookmark-prev`
+    - サクラエディタの「前のブックマークへ」（`SHIFT + F2`）
+    - 導入
+        - 前提は、`sakuraeditor-bookmark-like`の作業を実施済みであること。
+        - 同様に、`sakuraeditor_bookmark_like_prev.md` を `SHIFT + F2` に割り当てます。
+    - 動作確認
+        - `SHIFT + F2` キーを押し、ハイライトした行にジャンプすることを確認します。
 - `templater-js-hot`
     - 導入
         - 前提は、`sakuraeditor-bookmark-like`の作業を実施済みであること。
@@ -63,14 +78,14 @@
         - `CTRL + T` キーを押し、カーソルのある場所に「Hello, World!」が挿入されることを確認します。
 
 # 参考リンク
-- https://minerva.mamansoft.net/Notes/Script+User+Functions
+- [Script User Functions](https://minerva.mamansoft.net/Notes/Script+User+Functions)
     - TemplatorのScript User Functionsの説明です。
         - 当リポジトリも、Script User Functionsの方式をとっています。
-- https://docs.obsidian.md/Reference/TypeScript+API/Editor
+- [Obdisian Editor API](https://docs.obsidian.md/Reference/TypeScript+API/Editor)
     - editorのAPIリファレンスです。
-- https://silentvoid13.github.io/Templater/internal-functions/internal-modules/file-module.html
-    - Templator tp のAPIリファレンスです。
-- https://minerva.mamansoft.net/Notes/%F0%9F%93%95Templater%E3%81%A7%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88
+- [Templator File Module API](https://silentvoid13.github.io/Templater/internal-functions/internal-modules/file-module.html)
+    - Templator tp.file のAPIリファレンスです。
+- [📕Templaterでよく使うコマンド・スニペット](https://minerva.mamansoft.net/Notes/%F0%9F%93%95Templater%E3%81%A7%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88)
     - scriptを書くとき参考になります。
-- https://tadashi-aikawa.github.io/obsidian-tempura/
+- [Obsidian Tempura](https://tadashi-aikawa.github.io/obsidian-tempura/)
     - Script User Functionsと、Templater scriptの統合開発環境です。

@@ -1,0 +1,1 @@
+<%* tp.user.sakuraeditor_bookmark_prev(tp) -%>
