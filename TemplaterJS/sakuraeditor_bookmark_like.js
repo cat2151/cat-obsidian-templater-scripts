@@ -51,7 +51,7 @@ async function Templater_js_hot(tp) {
   }
   function findPartialHighlight(editor) {
     const line = editor.getSelection()
-    const regex = /^[^=].*==.*[^=]$/
+    const regex = /^([^=].*==.*|.*==.*[^=])$/
     return line.match(regex)
   }
 
