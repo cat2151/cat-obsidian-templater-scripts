@@ -1,5 +1,10 @@
 # Obsidian Templater Scripts
 - user scripts for Obsidian Templater Plugin
+## 対象読者は？
+- Templaterコミュニティプラグインをある程度使っていて、APIのもっと初歩的で具体的なサンプルがほしい人。
+- 例えば、「Templaterコミュニティプラグインって、templateにJavaScriptが書けるらしいね。
+  - そこからObsidianのAPIが呼べるので、いろいろできそう。
+  - でも、うまくいかなかった。よくわからない。」
 ## 用途は？
 - 便利な機能の共有用
     - 後述の `sakuraeditor-bookmark-like` の機能が使えるようになります。
