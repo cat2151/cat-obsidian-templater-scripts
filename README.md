@@ -61,7 +61,6 @@
         - Obsidianの標準機能の `F2`（ノートのリネーム）と衝突するためです。
             - 筆者はひとまず、ノートのリネームを優先しています。
 - `sakuraeditor-bookmark-prev`
-    - サクラエディタの「前のブックマークへ」（`SHIFT + F2`）
     - 導入
         - 前提は、`sakuraeditor-bookmark-like`の作業を実施済みであること。
         - 同様に、`sakuraeditor_bookmark_like_prev.md` を `SHIFT + F2` に割り当てます。
