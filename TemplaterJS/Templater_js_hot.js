@@ -207,6 +207,72 @@ async function Templater_js_hot(tp) {
 //    if (currentLineNumber < 0) break
 //  }
 
+  // ◆jump : ノート先頭から末尾まで str を検索し、カーソルをhit行の末尾に移動する ※sakuraeditor_bookmark_next.js から持ってきて変更した
+//   const str = 'foo'
+//   const editor = app.workspace.activeLeaf.view.editor
+//   search(editor, str)
+//   function search(editor, target) {
+//     const initialLineNumber = 0
+//     let currentLineNumber = initialLineNumber
+//     while (true) {
+// //      console.log(currentLineNumber)
+//       let line = editor.getLine(currentLineNumber)
+//       if (currentLineNumber == initialLineNumber) {
+//         line = line.slice(editor.getCursor().ch)
+//       }
+//       if (line.includes(target)) {
+//         let pos = { ch: line.length, line: currentLineNumber } // chが2だと「# foo」のfにカーソルがあたらずカーソルが表示されなかった。3ならoにカーソルがあたった。カーソルが見えることを優先し、末尾にカーソルを当てるとする
+//         editor.setCursor(pos)
+// //        const e = { from: pos, to:pos }
+// //        editor.scrollIntoView(e, true) // センタリングしたい場合用、ひとまずナシで様子見する
+//         break
+//       }
+// //      console.log(line)
+//       currentLineNumber++
+//       if (currentLineNumber > editor.lastLine()) break
+//     }
+//   }
+
+  // ◆ins : str を、現在行の末尾にinsertする
+//  const str = '\n[foo.mdを挿入](obsidian://adv-uri?commandid=templater-obsidian:Templates/foo.md)'
+//  const editor = app.workspace.activeLeaf.view.editor
+//  const lineNumber = editor.getCursor().line
+//  const line = editor.getLine(lineNumber)
+//  let pos = { ch: line.length, line: lineNumber }
+//  editor.setCursor(pos)
+//  tp.file.cursor_append(str)
+
+  // ◆ins : filePathで指定したファイルを、現在行の末尾に挿入する
+//  const filePath = '[[Templates/foo.md]]';
+//  const editor = app.workspace.activeLeaf.view.editor;
+//  const lineNumber = editor.getCursor().line;
+//  const line = editor.getLine(lineNumber);
+//  let pos = { ch: line.length, line: lineNumber };
+//  editor.setCursor(pos);
+//  str = await tp.file.include(filePath);
+//  tp.file.cursor_append(str)
+
+  // ◆insert-file : 現在行を [comment](URI-head&insert-filename=filePath) 形式でパースし、filePathの内容で置き換える
+//  const editor = app.workspace.activeLeaf.view.editor
+//  const lineNumber = editor.getCursor().line
+//  const line = editor.getLine(lineNumber)
+//  const regex = /.*\[([^\]]+)\]\(([^&]+)&insert-filename=([^\)]+)\)/
+//  const match = line.match(regex)
+//  if (match) {
+//    const comment = match[1]
+//    const uriHead = match[2]
+//    const filePath = match[3]
+//    console.log('comment:', comment)
+//    console.log('URI-head:', uriHead)
+//    console.log('filePath:', filePath)
+//    let pos = { ch: 0, line: editor.getCursor().line }
+//    str = await tp.file.include(`[[${filePath}]]`)
+//    editor.setLine(lineNumber, str)
+//    editor.setCursor(pos)
+//  } else {
+//    console.log('パースできませんでした:', line)
+//  }
+
 }
 
 module.exports = Templater_js_hot

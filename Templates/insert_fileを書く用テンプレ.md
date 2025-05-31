@@ -1,0 +1,1 @@
+[test用mdを挿入（現在行は削除）](obsidian://adv-uri?commandid=templater-obsidian:Templates/insert_file.md&insert-filename=Templates/insert_fileを書く用テンプレ用test.md)
