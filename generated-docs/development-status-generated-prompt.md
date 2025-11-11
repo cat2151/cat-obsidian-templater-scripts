@@ -1,4 +1,4 @@
-Last updated: 2025-11-11
+Last updated: 2025-11-12
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -222,6 +222,7 @@ Last updated: 2025-11-11
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+f25d834 Update project summaries (overview & development status) [auto]
 f0b5fc0 ja
 8cc487b github-actionsリポジトリの共通ワークフローを導入
 4b1dadb jekyll settings
@@ -241,7 +242,11 @@ Templates/insert_file.md
 "Templates/insert_file\343\202\222\346\233\270\343\201\217\347\224\250\343\203\206\343\203\263\343\203\227\343\203\254.md"
 "Templates/insert_file\343\202\222\346\233\270\343\201\217\347\224\250\343\203\206\343\203\263\343\203\227\343\203\254\347\224\250test.md"
 _config.yml
+generated-docs/development-status-generated-prompt.md
+generated-docs/development-status.md
+generated-docs/project-overview-generated-prompt.md
+generated-docs/project-overview.md
 
 
 ---
-Generated at: 2025-11-11 09:21:18 JST
+Generated at: 2025-11-12 07:04:33 JST

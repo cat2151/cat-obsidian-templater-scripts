@@ -1,4 +1,4 @@
-Last updated: 2025-11-11
+Last updated: 2025-11-12
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -263,4 +263,4 @@ Templates/sakuraeditor_bookmark_like_prev.md
 
 
 ---
-Generated at: 2025-11-11 09:21:18 JST
+Generated at: 2025-11-12 07:04:33 JST
