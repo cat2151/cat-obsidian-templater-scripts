@@ -1,4 +1,4 @@
-Last updated: 2025-11-12
+Last updated: 2025-12-02
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -203,6 +203,7 @@ Last updated: 2025-11-12
   📖 sakuraeditor_bookmark_like_prev.md
 📄 _config.yml
 📁 generated-docs/
+🌐 googled947dc864c270e07.html
 
 ## ファイル詳細分析
 **TemplaterJS/Templater_js_hot.js** (279行, 10406バイト)
@@ -223,6 +224,10 @@ Last updated: 2025-11-12
 
 **TemplaterJS/sakuraeditor_bookmark_prev.js** (27行, 1299バイト)
   - 関数: Templater_js_hot, search, for
+  - インポート: なし
+
+**googled947dc864c270e07.html** (1行, 53バイト)
+  - 関数: なし
   - インポート: なし
 
 ## 関数呼び出し階層
@@ -252,6 +257,7 @@ Templates/insert_fileを書く用テンプレ用test.md
 Templates/sakuraeditor_bookmark_like.md
 Templates/sakuraeditor_bookmark_like_next.md
 Templates/sakuraeditor_bookmark_like_prev.md
+googled947dc864c270e07.html
 
 上記の情報を基に、プロンプトで指定された形式でプロジェクト概要を生成してください。
 特に以下の点を重視してください：
@@ -263,4 +269,4 @@ Templates/sakuraeditor_bookmark_like_prev.md
 
 
 ---
-Generated at: 2025-11-12 07:04:33 JST
+Generated at: 2025-12-02 07:04:14 JST

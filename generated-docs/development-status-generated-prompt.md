@@ -1,4 +1,4 @@
-Last updated: 2025-11-12
+Last updated: 2025-12-02
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -161,6 +161,7 @@ Last updated: 2025-11-12
 - .github/actions-tmp/generated-docs/project-overview-generated-prompt.md
 - .github/actions-tmp/generated-docs/project-overview.md
 - .github/actions-tmp/generated-docs/style.css
+- .github/actions-tmp/googled947dc864c270e07.html
 - .github/actions-tmp/issue-notes/10.md
 - .github/actions-tmp/issue-notes/11.md
 - .github/actions-tmp/issue-notes/12.md
@@ -213,6 +214,7 @@ Last updated: 2025-11-12
 - Templates/sakuraeditor_bookmark_like_prev.md
 - _config.yml
 - generated-docs/project-overview-generated-prompt.md
+- googled947dc864c270e07.html
 
 ## 現在のオープンIssues
 オープン中のIssueはありません
@@ -222,31 +224,21 @@ Last updated: 2025-11-12
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
-f25d834 Update project summaries (overview & development status) [auto]
-f0b5fc0 ja
-8cc487b github-actionsリポジトリの共通ワークフローを導入
-4b1dadb jekyll settings
+58203c2 Google検索にindexさせる用
+9303af2 Google検索にindexさせる用
 
 ### 変更されたファイル:
 .github/workflows/call-daily-project-summary.yml
 .github/workflows/call-issue-note.yml
 .github/workflows/call-translate-readme.yml
-.github/workflows/issue-note.yml
-.gitignore
 README.ja.md
-README.md
-TemplaterJS/Templater_js_hot.js
-TemplaterJS/insert_file.js
-TemplaterJS/sakuraeditor_bookmark_like.js
-Templates/insert_file.md
-"Templates/insert_file\343\202\222\346\233\270\343\201\217\347\224\250\343\203\206\343\203\263\343\203\227\343\203\254.md"
-"Templates/insert_file\343\202\222\346\233\270\343\201\217\347\224\250\343\203\206\343\203\263\343\203\227\343\203\254\347\224\250test.md"
 _config.yml
 generated-docs/development-status-generated-prompt.md
 generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
+googled947dc864c270e07.html
 
 
 ---
-Generated at: 2025-11-12 07:04:33 JST
+Generated at: 2025-12-02 07:04:14 JST
