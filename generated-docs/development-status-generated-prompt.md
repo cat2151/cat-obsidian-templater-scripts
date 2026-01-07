@@ -1,4 +1,4 @@
-Last updated: 2025-12-02
+Last updated: 2026-01-08
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -106,11 +106,13 @@ Last updated: 2025-12-02
 - .github/actions-tmp/.github/workflows/call-callgraph.yml
 - .github/actions-tmp/.github/workflows/call-daily-project-summary.yml
 - .github/actions-tmp/.github/workflows/call-issue-note.yml
+- .github/actions-tmp/.github/workflows/call-rust-windows-check.yml
 - .github/actions-tmp/.github/workflows/call-translate-readme.yml
 - .github/actions-tmp/.github/workflows/callgraph.yml
 - .github/actions-tmp/.github/workflows/check-recent-human-commit.yml
 - .github/actions-tmp/.github/workflows/daily-project-summary.yml
 - .github/actions-tmp/.github/workflows/issue-note.yml
+- .github/actions-tmp/.github/workflows/rust-windows-check.yml
 - .github/actions-tmp/.github/workflows/translate-readme.yml
 - .github/actions-tmp/.github_automation/callgraph/codeql-queries/callgraph.ql
 - .github/actions-tmp/.github_automation/callgraph/codeql-queries/codeql-pack.lock.yml
@@ -202,6 +204,7 @@ Last updated: 2025-12-02
 - README.md
 - TemplaterJS/Templater_js_hot.js
 - TemplaterJS/insert_file.js
+- TemplaterJS/insert_yesterday_todo.js
 - TemplaterJS/sakuraeditor_bookmark_like.js
 - TemplaterJS/sakuraeditor_bookmark_next.js
 - TemplaterJS/sakuraeditor_bookmark_prev.js
@@ -209,6 +212,7 @@ Last updated: 2025-12-02
 - Templates/insert_file.md
 - Templates/insert_fileを書く用テンプレ.md
 - Templates/insert_fileを書く用テンプレ用test.md
+- Templates/insert_yesterday_todo.md
 - Templates/sakuraeditor_bookmark_like.md
 - Templates/sakuraeditor_bookmark_like_next.md
 - Templates/sakuraeditor_bookmark_like_prev.md
@@ -224,14 +228,18 @@ Last updated: 2025-12-02
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
-58203c2 Google検索にindexさせる用
-9303af2 Google検索にindexさせる用
+b2aecf9 Auto-translate README.ja.md to README.md [auto]
+9d6a58c insert_yesterday_todo を追加
+8b4020a コードの整形: 不要な空白を削除
+b0d0b7b ケバブケースからスネークケースに一括置換。Templaterでケバブケースを書いて原因のわかりづらいバグの温床になることがあり、その対策用
 
 ### 変更されたファイル:
-.github/workflows/call-daily-project-summary.yml
-.github/workflows/call-issue-note.yml
-.github/workflows/call-translate-readme.yml
 README.ja.md
+README.md
+TemplaterJS/Templater_js_hot.js
+TemplaterJS/insert_file.js
+TemplaterJS/insert_yesterday_todo.js
+Templates/insert_yesterday_todo.md
 _config.yml
 generated-docs/development-status-generated-prompt.md
 generated-docs/development-status.md
@@ -241,4 +249,4 @@ googled947dc864c270e07.html
 
 
 ---
-Generated at: 2025-12-02 07:04:14 JST
+Generated at: 2026-01-08 07:04:06 JST

@@ -1,4 +1,4 @@
-Last updated: 2025-12-02
+Last updated: 2026-01-08
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -70,45 +70,45 @@ Last updated: 2025-12-02
   - でも、うまくいかなかった。よくわからない。」
 ## 用途は？
 - 便利な機能の共有用
-    - 後述の `sakuraeditor-bookmark-like` と `insert-file` の機能が使えるようになります。
+    - 後述の `sakuraeditor_bookmark_like` と `insert_file` の機能が使えるようになります。
 - ノウハウの共有用
     - Templaterプラグインは、JavaScriptでObsidianのAPIを呼べるので、便利ですよね。
     - テキストエディタのマクロのようなことができます。
         - 例えば秀丸エディタ、テキストエディター「Mery」、サクラエディタ、のような。
         - コミュニティプラグインに比べて、手早くObsidianに機能追加をしたいときに向きます。
     - さわってみたところ、例えば `Hello, World!` がすぐできるような資料があると楽そう、と感じました。
-    - そこで後述の `templater-js-hot` と `insert-file` を公開します。何かの参考になれば幸いです。
+    - そこで後述の `templater_js_hot` と `insert_file` を公開します。何かの参考になれば幸いです。
 ## 何ができるの？
-- `sakuraeditor-bookmark-like`
+- `sakuraeditor_bookmark_like`
     - どんな機能？：
         - 現在行をハイライトします。トグル動作します。
         - 範囲選択した場合は、Obsidian標準機能の「ハイライトをトグル」と同じ動作です。
     - 他のエディタの機能で例えると：
         - サクラエディタの「ブックマーク設定・解除」（`CTRL + F2`）
         - 秀丸エディタの「現在行をマーク」
-- `sakuraeditor-bookmark-next`
+- `sakuraeditor_abookmark_next`
     - サクラエディタの「次のブックマークへ」（`F2`）
-- `sakuraeditor-bookmark-prev`
+- `sakuraeditor_abookmark_prev`
     - サクラエディタの「前のブックマークへ」（`SHIFT + F2`）
-- `insert-file`
+- `insert_file`
     - どんな機能？：
         - 現在行に指定したファイルを挿入します。（現在行は削除します）
     - 用途は？：
         - 例えばデイリーノートのテンプレートに組み込みます。
             - 例えば `20時のタスクをここに挿入する` という行を用意して、20時にそれをクリック。すると、`20時のタスクをここに挿入する` という行は削除され、そこに、用意しておいたTemplatesファイルが挿入されます。さらにそのファイルの末尾に `21時のタスクをここに挿入する` と書く使い方もできます。
         - あくまで一例です。人によってもっとマッチする使い方がある想定です。
-- `templater-js-hot`
+- `templater_js_hot`
     - スニペット的なものです。
         - `Hello, World!` のように、小さく、単体で動作するコード群です。
         - コメントアウトされています。
         - それぞれアンコメントすることで、実際に動作します。
     - 筆者は `CTRL + T` に割り当てて使っています。
-        - `sakuraeditor-bookmark-like` と `insert-file` は、これを使って開発しました。
+        - `sakuraeditor_bookmark_like` と `insert_file` は、これを使って開発しました。
     - メリットは小規模ゆえ導入コストと運用コストが低いこと、
         - デメリットは（ほかの大規模開発環境に比べて）開発サポート機能が少ないことです。
         - まず導入して小規模scriptを書いてみる、という用途に向く想定です。
 ## どうやって使うの？
-- `sakuraeditor-bookmark-like`
+- `sakuraeditor_bookmark_like`
     - Templater
         - Obsidianに、Templaterコミュニティプラグインをインストールします。
     - フォルダ
@@ -126,19 +126,19 @@ Last updated: 2025-12-02
     - 動作確認
         - `CTRL + F2`キーを押し、現在行がハイライトされることを確認します。
         - 再度押して、現在行のハイライトが消える（トグル動作する）ことを確認します。
-- `sakuraeditor-bookmark-next`
+- `sakuraeditor_abookmark_next`
     - 筆者はひとまず、使わずに様子見しています。
         - Obsidianの標準機能の `F2`（ノートのリネーム）と衝突するためです。
             - 筆者はひとまず、ノートのリネームを優先しています。
-- `sakuraeditor-bookmark-prev`
+- `sakuraeditor_abookmark_prev`
     - 導入
-        - 前提は、`sakuraeditor-bookmark-like`の作業を実施済みであること。
+        - 前提は、`sakuraeditor_bookmark_like`の作業を実施済みであること。
         - 同様に、`sakuraeditor_bookmark_like_prev.md` を `SHIFT + F2` に割り当てます。
     - 動作確認
         - `SHIFT + F2` キーを押し、ハイライトした行にジャンプすることを確認します。
-- `insert-file`
+- `insert_file`
     - 導入
-        - 前提は、`sakuraeditor-bookmark-like`の作業を実施済みであること。
+        - 前提は、`sakuraeditor_bookmark_like`の作業を実施済みであること。
         - Advanced URI
             - [Advanced URI コミュニティプラグイン](https://github.com/Vinzent03/obsidian-advanced-uri) をinstallします。
             - Advanced URI のオプション画面を開き、`Open file on write`等の設定をすべてoffにします。動作確認を確実に行うためです。なお筆者はそのまますべてoffで使っています。
@@ -155,9 +155,9 @@ Last updated: 2025-12-02
     - 補足
         - [Shukuchi(縮地)コミュニティプラグイン](https://github.com/tadashi-aikawa/shukuchi) があるとキーボードだけで素早く使えて便利です。
         - あたかも「便利なボタン」を「キーボードで素早く押す」かのように使えます。筆者はこの方法で毎日使っています。
-- `templater-js-hot`
+- `templater_js_hot`
     - 導入
-        - 前提は、`sakuraeditor-bookmark-like`の作業を実施済みであること。
+        - 前提は、`sakuraeditor_bookmark_like`の作業を実施済みであること。
         - 同様に、`Templater_js_hot.md` を `CTRL + T` に割り当てます。
     - 編集
         - `Templater_js_hot.js` を編集します。
@@ -190,6 +190,7 @@ Last updated: 2025-12-02
 📁 TemplaterJS/
   📜 Templater_js_hot.js
   📜 insert_file.js
+  📜 insert_yesterday_todo.js
   📜 sakuraeditor_bookmark_like.js
   📜 sakuraeditor_bookmark_next.js
   📜 sakuraeditor_bookmark_prev.js
@@ -198,6 +199,7 @@ Last updated: 2025-12-02
   📖 insert_file.md
   📖 insert_fileを書く用テンプレ.md
   📖 insert_fileを書く用テンプレ用test.md
+  📖 insert_yesterday_todo.md
   📖 sakuraeditor_bookmark_like.md
   📖 sakuraeditor_bookmark_like_next.md
   📖 sakuraeditor_bookmark_like_prev.md
@@ -206,11 +208,15 @@ Last updated: 2025-12-02
 🌐 googled947dc864c270e07.html
 
 ## ファイル詳細分析
-**TemplaterJS/Templater_js_hot.js** (279行, 10406バイト)
+**TemplaterJS/Templater_js_hot.js** (304行, 11226バイト)
   - 関数: Templater_js_hot, selectNowLine, findHeader, findHighlight, findPartialHighlight, search, if, while
   - インポート: なし
 
-**TemplaterJS/insert_file.js** (27行, 868バイト)
+**TemplaterJS/insert_file.js** (27行, 867バイト)
+  - 関数: Templater_js_hot, if
+  - インポート: なし
+
+**TemplaterJS/insert_yesterday_todo.js** (30行, 771バイト)
   - 関数: Templater_js_hot, if
   - インポート: なし
 
@@ -247,6 +253,7 @@ README.ja.md
 README.md
 TemplaterJS/Templater_js_hot.js
 TemplaterJS/insert_file.js
+TemplaterJS/insert_yesterday_todo.js
 TemplaterJS/sakuraeditor_bookmark_like.js
 TemplaterJS/sakuraeditor_bookmark_next.js
 TemplaterJS/sakuraeditor_bookmark_prev.js
@@ -254,6 +261,7 @@ Templates/Templater_js_hot.md
 Templates/insert_file.md
 Templates/insert_fileを書く用テンプレ.md
 Templates/insert_fileを書く用テンプレ用test.md
+Templates/insert_yesterday_todo.md
 Templates/sakuraeditor_bookmark_like.md
 Templates/sakuraeditor_bookmark_like_next.md
 Templates/sakuraeditor_bookmark_like_prev.md
@@ -269,4 +277,4 @@ googled947dc864c270e07.html
 
 
 ---
-Generated at: 2025-12-02 07:04:14 JST
+Generated at: 2026-01-08 07:04:06 JST
