@@ -15,7 +15,7 @@ async function Templater_js_hot(tp) {
     console.log('filePath:', filePath)
     let pos = { ch: 0, line: editor.getCursor().line }
     str = await tp.file.include(`[[${filePath}]]`)
-    editor.setLine(lineNumber, str) 
+    editor.setLine(lineNumber, str)
     editor.setCursor(pos)
   } else {
     console.log('パースできませんでした:', line)
