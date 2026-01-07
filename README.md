@@ -1,116 +1,116 @@
 # Obsidian Templater Scripts
 - User scripts for Obsidian Templater Plugin.
-## 対象読者は？
-- Templaterコミュニティプラグインをある程度使っていて、APIのもっと初歩的で具体的なサンプルがほしい人。
-- 例えば、「Templaterコミュニティプラグインって、templateにJavaScriptが書けるらしいね。
-  - そこからObsidianのAPIが呼べるので、いろいろできそう。
-  - でも、うまくいかなかった。よくわからない。」
-## 用途は？
-- 便利な機能の共有用
-    - 後述の `sakuraeditor-bookmark-like` と `insert-file` の機能が使えるようになります。
-- ノウハウの共有用
-    - Templaterプラグインは、JavaScriptでObsidianのAPIを呼べるので、便利ですよね。
-    - テキストエディタのマクロのようなことができます。
-        - 例えば秀丸エディタ、テキストエディター「Mery」、サクラエディタ、のような。
-        - コミュニティプラグインに比べて、手早くObsidianに機能追加をしたいときに向きます。
-    - さわってみたところ、例えば `Hello, World!` がすぐできるような資料があると楽そう、と感じました。
-    - そこで後述の `templater-js-hot` と `insert-file` を公開します。何かの参考になれば幸いです。
-## 何ができるの？
-- `sakuraeditor-bookmark-like`
-    - どんな機能？：
-        - 現在行をハイライトします。トグル動作します。
-        - 範囲選択した場合は、Obsidian標準機能の「ハイライトをトグル」と同じ動作です。
-    - 他のエディタの機能で例えると：
-        - サクラエディタの「ブックマーク設定・解除」（`CTRL + F2`）
-        - 秀丸エディタの「現在行をマーク」
-- `sakuraeditor-bookmark-next`
-    - サクラエディタの「次のブックマークへ」（`F2`）
-- `sakuraeditor-bookmark-prev`
-    - サクラエディタの「前のブックマークへ」（`SHIFT + F2`）
-- `insert-file`
-    - どんな機能？：
-        - 現在行に指定したファイルを挿入します。（現在行は削除します）
-    - 用途は？：
-        - 例えばデイリーノートのテンプレートに組み込みます。
-            - 例えば `20時のタスクをここに挿入する` という行を用意して、20時にそれをクリック。すると、`20時のタスクをここに挿入する` という行は削除され、そこに、用意しておいたTemplatesファイルが挿入されます。さらにそのファイルの末尾に `21時のタスクをここに挿入する` と書く使い方もできます。
-        - あくまで一例です。人によってもっとマッチする使い方がある想定です。
-- `templater-js-hot`
-    - スニペット的なものです。
-        - `Hello, World!` のように、小さく、単体で動作するコード群です。
-        - コメントアウトされています。
-        - それぞれアンコメントすることで、実際に動作します。
-    - 筆者は `CTRL + T` に割り当てて使っています。
-        - `sakuraeditor-bookmark-like` と `insert-file` は、これを使って開発しました。
-    - メリットは小規模ゆえ導入コストと運用コストが低いこと、
-        - デメリットは（ほかの大規模開発環境に比べて）開発サポート機能が少ないことです。
-        - まず導入して小規模scriptを書いてみる、という用途に向く想定です。
-## どうやって使うの？
-- `sakuraeditor-bookmark-like`
+## Who is this for?
+- Those who have some experience with the Templater community plugin and are looking for more basic and concrete API examples.
+- For example, "I hear the Templater community plugin allows writing JavaScript in templates.
+  - This means I can call Obsidian's API and do a lot.
+  - But I couldn't get it to work. I'm not sure why."
+## What is it for?
+- Sharing useful features
+    - You will be able to use the `sakuraeditor_bookmark_like` and `insert_file` features described below.
+- Sharing know-how
+    - The Templater plugin is convenient because it allows you to call Obsidian's API with JavaScript.
+    - You can do things similar to text editor macros.
+        - For example, like HideMaru Editor, text editor "Mery", or Sakura Editor.
+        - It's suitable when you want to quickly add functionality to Obsidian compared to community plugins.
+    - After trying it, I felt it would be easier if there were materials that could quickly demonstrate something like `Hello, World!`.
+    - Therefore, I am publishing `templater_js_hot` and `insert_file` below. I hope they will be of some reference.
+## What can it do?
+- `sakuraeditor_bookmark_like`
+    - What does it do?:
+        - Highlights the current line. It toggles the highlight.
+        - If text is selected, it behaves the same as Obsidian's built-in "Toggle highlight" feature.
+    - Examples from other editors:
+        - Sakura Editor's "Set/Clear Bookmark" (`CTRL + F2`)
+        - HideMaru Editor's "Mark Current Line"
+- `sakuraeditor_abookmark_next`
+    - Sakura Editor's "Next Bookmark" (`F2`)
+- `sakuraeditor_abookmark_prev`
+    - Sakura Editor's "Previous Bookmark" (`SHIFT + F2`)
+- `insert_file`
+    - What does it do?:
+        - Inserts the specified file at the current line (deletes the current line).
+    - What is it for?:
+        - For example, you can integrate it into your daily note template.
+            - For instance, you prepare a line like `Insert 8 PM tasks here`, and at 8 PM, you click it. The line `Insert 8 PM tasks here` is deleted, and the prepared Templates file is inserted there. You can also use it to write `Insert 9 PM tasks here` at the end of that file.
+        - This is just one example. It's assumed that there are more suitable uses depending on the user.
+- `templater_js_hot`
+    - This is a snippet-like feature.
+        - It's a collection of small, self-contained code snippets, like `Hello, World!`.
+        - They are commented out.
+        - Uncommenting each one will make it functional.
+    - I use it assigned to `CTRL + T`.
+        - Both `sakuraeditor_bookmark_like` and `insert_file` were developed using this.
+    - The advantage is low adoption and maintenance costs due to its small scale.
+        - The disadvantage is fewer development support features (compared to other large-scale development environments).
+        - It's intended for initial adoption and writing small-scale scripts.
+## How to use it?
+- `sakuraeditor_bookmark_like`
     - Templater
-        - Obsidianに、Templaterコミュニティプラグインをインストールします。
-    - フォルダ
-        - Templater設定の「User Script Functions」の「Script files folder location」を設定します。
-            - 例えば `TemplaterJS`
-    - ファイル配置
-        - vault配下のディレクトリ `Templates` と `TemplaterJS` ディレクトリに、
-            - 当リポジトリの `Templates` と `TemplaterJS` ディレクトリの内容をコピーします。
-            - （MarkdownファイルとJavaScriptファイルです）
-    - ホットキー
-        - Templater設定の「Template Hotkeys」欄に、例えば `Templates/sakuraeditor_bookmark_like.md` を入力します。
-        - 近くにある「+」ボタンをクリックし、ホットキー設定を開き、右上欄に `sakura` を入力して、「Templater: Insert Templates/sakuraeditor_bookmark_like.md」が表示されたことを確認し、
-        - 右の「+」ボタンをクリックし、
-        - 例えば `CTRL + F2` キーを押して、キーを割り当てます。
-    - 動作確認
-        - `CTRL + F2`キーを押し、現在行がハイライトされることを確認します。
-        - 再度押して、現在行のハイライトが消える（トグル動作する）ことを確認します。
-- `sakuraeditor-bookmark-next`
-    - 筆者はひとまず、使わずに様子見しています。
-        - Obsidianの標準機能の `F2`（ノートのリネーム）と衝突するためです。
-            - 筆者はひとまず、ノートのリネームを優先しています。
-- `sakuraeditor-bookmark-prev`
-    - 導入
-        - 前提は、`sakuraeditor-bookmark-like`の作業を実施済みであること。
-        - 同様に、`sakuraeditor_bookmark_like_prev.md` を `SHIFT + F2` に割り当てます。
-    - 動作確認
-        - `SHIFT + F2` キーを押し、ハイライトした行にジャンプすることを確認します。
-- `insert-file`
-    - 導入
-        - 前提は、`sakuraeditor-bookmark-like`の作業を実施済みであること。
+        - Install the Templater community plugin in Obsidian.
+    - Folder
+        - Set the "Script files folder location" in Templater settings under "User Script Functions".
+            - For example, `TemplaterJS`
+    - File Placement
+        - In the `Templates` and `TemplaterJS` directories located under your vault,
+            - copy the contents of this repository's `Templates` and `TemplaterJS` directories.
+            - (These are Markdown and JavaScript files)
+    - Hotkey
+        - In the "Template Hotkeys" section of Templater settings, enter, for example, `Templates/sakuraeditor_bookmark_like.md`.
+        - Click the nearby "+" button, open the hotkey settings, enter `sakura` in the top-right field, confirm that "Templater: Insert Templates/sakuraeditor_bookmark_like.md" is displayed,
+        - click the "+" button on the right,
+        - and assign a key, for example, by pressing `CTRL + F2`.
+    - Verify Operation
+        - Press `CTRL + F2` and confirm that the current line is highlighted.
+        - Press it again and confirm that the current line's highlight disappears (toggles off).
+- `sakuraeditor_abookmark_next`
+    - For now, I'm holding off on using it.
+        - This is because it conflicts with Obsidian's standard `F2` function (rename note).
+            - For now, I prioritize renaming notes.
+- `sakuraeditor_abookmark_prev`
+    - Setup
+        - Prerequisite: The steps for `sakuraeditor_bookmark_like` must have been completed.
+        - Similarly, assign `sakuraeditor_bookmark_like_prev.md` to `SHIFT + F2`.
+    - Verify Operation
+        - Press `SHIFT + F2` and confirm that it jumps to the highlighted line.
+- `insert_file`
+    - Setup
+        - Prerequisite: The steps for `sakuraeditor_bookmark_like` must have been completed.
         - Advanced URI
-            - [Advanced URI コミュニティプラグイン](https://github.com/Vinzent03/obsidian-advanced-uri) をinstallします。
-            - Advanced URI のオプション画面を開き、`Open file on write`等の設定をすべてoffにします。動作確認を確実に行うためです。なお筆者はそのまますべてoffで使っています。
-        - Template command 登録
-            - Templater設定の「Template Hotkeys」欄に、例えば以下の2つを登録します：
+            - Install the [Advanced URI community plugin](https://github.com/Vinzent03/obsidian-advanced-uri).
+            - Open the Advanced URI options screen and turn off all settings like `Open file on write`. This is to ensure reliable operation verification. I use it with all settings off as is.
+        - Register Template command
+            - In the "Template Hotkeys" section of Templater settings, register the following two, for example:
                 - `Templates/insert_file.md`
                 - `Templates/insert_fileを書く用テンプレ.md`
-    - 動作確認
-        - コマンドパレットで `insert_file` と入力するか、スラッシュコマンドで `/insert_file` と入力します。
-        - 候補から `insert Templates/insert_fileを書く用テンプレ.md` を選びます。
-        - 現在行に `[test用mdを挿入（現在行は削除）](obsidian://adv-uri?commandid=templater-obsidian:Templates/insert_file.md&insert-filename=Templates/insert_fileを書く用テンプレ用test.md)` が挿入されることを確認します。
-        - それをクリックします。
-        - 現在行が `これは insert_fileを書く用テンプレ用test.md の中身です` となることを確認します。
-    - 補足
-        - [Shukuchi(縮地)コミュニティプラグイン](https://github.com/tadashi-aikawa/shukuchi) があるとキーボードだけで素早く使えて便利です。
-        - あたかも「便利なボタン」を「キーボードで素早く押す」かのように使えます。筆者はこの方法で毎日使っています。
-- `templater-js-hot`
-    - 導入
-        - 前提は、`sakuraeditor-bookmark-like`の作業を実施済みであること。
-        - 同様に、`Templater_js_hot.md` を `CTRL + T` に割り当てます。
-    - 編集
-        - `Templater_js_hot.js` を編集します。
-            - `hello, world` の行をアンコメントします。
-    - 動作確認
-        - `CTRL + T` キーを押し、カーソルのある場所に「Hello, World!」が挿入されることを確認します。
+    - Verify Operation
+        - Type `insert_file` in the command palette, or `/insert_file` as a slash command.
+        - Select `insert Templates/insert_fileを書く用テンプレ.md` from the suggestions.
+        - Confirm that `[Insert test md (deletes current line)](obsidian://adv-uri?commandid=templater-obsidian:Templates/insert_file.md&insert-filename=Templates/insert_fileを書く用テンプレ用test.md)` is inserted at the current line.
+        - Click it.
+        - Confirm that the current line becomes `This is the content of insert_fileを書く用テンプレ用test.md`.
+    - Note
+        - The [Shukuchi community plugin](https://github.com/tadashi-aikawa/shukuchi) is convenient for quick keyboard-only use.
+        - It can be used as if "quickly pressing a convenient button with the keyboard". I use this method daily.
+- `templater_js_hot`
+    - Setup
+        - Prerequisite: The steps for `sakuraeditor_bookmark_like` must have been completed.
+        - Similarly, assign `Templater_js_hot.md` to `CTRL + T`.
+    - Edit
+        - Edit `Templater_js_hot.js`.
+            - Uncomment the `hello, world` line.
+    - Verify Operation
+        - Press `CTRL + T` and confirm that "Hello, World!" is inserted at the cursor's location.
 
-# 参考リンク
+# Reference Links
 - [Script User Functions](https://minerva.mamansoft.net/Notes/Script+User+Functions)
-    - TemplaterのScript User Functionsの説明です。
-        - 当リポジトリも、Script User Functionsの方式をとっています。
+    - Explanation of Templater's Script User Functions.
+        - This repository also adopts the Script User Functions method.
 - [Obdisian Editor API](https://docs.obsidian.md/Reference/TypeScript+API/Editor)
-    - editorのAPIリファレンスです。
+    - Editor API reference.
 - [Templater File Module API](https://silentvoid13.github.io/Templater/internal-functions/internal-modules/file-module.html)
-    - Templater tp.file のAPIリファレンスです。
+    - Templater tp.file API reference.
 - [📕Templaterでよく使うコマンド・スニペット](https://minerva.mamansoft.net/Notes/%F0%9F%93%95Templater%E3%81%A7%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88)
-    - scriptを書くとき参考になります。
+    - Useful when writing scripts.
 - [Obsidian Tempura](https://tadashi-aikawa.github.io/obsidian-tempura/)
-    - Script User Functionsと、Templater scriptの統合開発環境です。
+    - An integrated development environment for Script User Functions and Templater scripts.
