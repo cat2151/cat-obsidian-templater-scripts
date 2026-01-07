@@ -1,0 +1,1 @@
+<%* tp.user.insert_yesterday_todo(tp) -%>

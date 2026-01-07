@@ -252,7 +252,7 @@ async function Templater_js_hot(tp) {
 //  str = await tp.file.include(filePath);
 //  tp.file.cursor_append(str)
 
-  // ◆insert-file : 現在行を [comment](URI-head&insert-filename=filePath) 形式でパースし、filePathの内容で置き換える
+  // ◆insert_file : 現在行を [comment](URI-head&insert-filename=filePath) 形式でパースし、filePathの内容で置き換える
 //  const editor = app.workspace.activeLeaf.view.editor
 //  const lineNumber = editor.getCursor().line
 //  const line = editor.getLine(lineNumber)
@@ -272,6 +272,31 @@ async function Templater_js_hot(tp) {
 //  } else {
 //    console.log('パースできませんでした:', line)
 //  }
+
+  // ◆insert_yesterday_todo : 前日の「# 明日の.*タスク」セクションを挿入する
+//  const editor = app.workspace.activeLeaf.view.editor
+//  const lineNumber = editor.getCursor().line
+//  const yesterday = moment(tp.file.title, "YYYY-MM-DD")
+//    .subtract(1, "days")
+//    .format("YYYY-MM-DD");
+//
+//  const yesterdayFile = tp.file.find_tfile(yesterday);
+//
+//  if (yesterdayFile) {
+//    const content = await app.vault.read(yesterdayFile);
+//    const match = content.match(/# 明日の.*タスク.*?\n([\s\S]*?)(?=\n#|$)/);
+//
+//    if (match && match[1]) {
+//      editor.setLine(lineNumber, match[1].trim());
+//    } else {
+//      editor.setLine(lineNumber, "前日からのタスクなし");
+//    }
+//  } else {
+//    editor.setLine(lineNumber, "前日のノートが見つからない");
+//  }
+//
+//  let pos = { ch: 0, line: lineNumber }
+//  editor.setCursor(pos)
 
 }
 
